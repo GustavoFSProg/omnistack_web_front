@@ -34,11 +34,10 @@ export default (props) => {
   async function handleLogout() {
     localStorage.clear()
 
-    // history.push('/')
-    window.location = '/'
+    history.push('/')
   }
   async function Redirect() {
-    window.location = '/incidents'
+    history.push('/incidents')
   }
   // //  --------------------alteraçções--------------
 

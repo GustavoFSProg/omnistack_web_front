@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import api, { getIncidentsByOngId } from '../../services/api'
 
+const history = useHistory()
+
 export default function NewIncident() {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -22,7 +24,7 @@ export default function NewIncident() {
 
       alert('Caso Cadastrado com sucesso!')
 
-      window.location('/')
+      history.push('/')
     } catch (error) {
       alert('Erro no cadastro!!')
     }
