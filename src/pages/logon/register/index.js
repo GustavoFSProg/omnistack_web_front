@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import './style.css'
 import logoImage from '../../../assets/logo.svg'
-import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import api from '../../../services/api'
 
@@ -22,13 +22,13 @@ export default function Register() {
     try {
       const res = await api.post('/ongs', data)
       console.log(data)
-      history.push('/')
       alert(`Seu ID de acesso! ${res.id}`)
+      history.push('/')
     } catch (error) {
       alert('Erro no cadastro!!')
     }
   }
-  
+
   return (
     <div className="register-container">
       <div className="content">

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { Link, useHistory } from 'react-router-dom'
 // eslint-disable-next-line import/no-unresolved
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 // eslint-disable-next-line import/no-unresolved
-import { Link, useHistory } from 'react-router-dom'
 import logoImage from '../../../assets/logo.svg'
 import '../profile/style.css'
 import api from '../../../services/api'
@@ -15,6 +15,9 @@ export default (props) => {
   const { incidents } = props
   const ongId = localStorage.getItem('ongId')
 
+  function Redirect() {
+    history.push('/incidents')
+  }
   // //  --------------------alteraçções--------------
 
   async function handleDeleteIncident(id) {
@@ -24,8 +27,8 @@ export default (props) => {
           authorization: ongId,
         },
       })
-      history.push('/profile')
       alert('Incident deletado com sucesso!')
+      history.push('/profile')
     } catch (error) {
       alert('ERRO do Front!')
     }
@@ -36,9 +39,7 @@ export default (props) => {
 
     history.push('/')
   }
-  async function Redirect() {
-    history.push('/incidents')
-  }
+
   // //  --------------------alteraçções--------------
 
   return (

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import './styles.css'
 import './global.css'
 import HeroesImage from '../../assets/heroes.png'
 import logoImage from '../../assets/logo.svg'
 import { FiLogIn } from 'react-icons/fi'
-import { Link, useHistory } from 'react-router-dom'
 import api from '../../services/api'
 
 export default function Logon() {
