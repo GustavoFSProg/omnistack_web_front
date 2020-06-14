@@ -17,8 +17,6 @@ axios.interceptors.request.use(
     const { status } = error.response
 
     if (status === 401) {
-      localStorage.clear()
-      window.location = '/'
     }
     return Promise.reject(error)
   }
