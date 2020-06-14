@@ -1,9 +1,9 @@
-import React, { useState, useHistory } from 'react'
+import React, { useState } from 'react'
 import '../NewIncident/style.css'
 import logoImage from '../../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
-import api, { getIncidentsByOngId } from '../../services/api'
+import api from '../../services/api'
 
 const history = useHistory()
 
