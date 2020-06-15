@@ -16,7 +16,7 @@ export default (props) => {
   const ongId = localStorage.getItem('ongId')
 
   function Redirect() {
-    window.location('/incidents')
+    history.push('/incidents')
   }
   // //  --------------------alteraçções--------------
 
@@ -47,9 +47,11 @@ export default (props) => {
       <header>
         <img src={logoImage} alt="Be the Hero" />
         <span>{`Ben Vinda,${ongName}!`}</span>
-        <Link type="button" className="button" to="/incidents">
-          Cadastrar novo Caso
-        </Link>
+        <button type="button" onClick={Redirect}>
+          <Link type="button" className="button">
+            Cadastrar novo Caso
+          </Link>
+        </button>
         <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#E02041" />
         </button>
