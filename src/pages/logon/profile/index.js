@@ -6,9 +6,9 @@ export default () => {
   const [incidents, setIncidents] = useState([])
   const id = localStorage.getItem('ongId')
 
-  const getIncidents = async (ongId) => {
+  const getIncidents = async (id) => {
     try {
-      const { data } = await getIncidentsByOngId(ongId)
+      const { data } = await getIncidentsByOngId(id)
       setIncidents(data)
     } catch (error) {
       // eslint-disable-next-line no-console

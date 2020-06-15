@@ -47,9 +47,9 @@ export default (props) => {
       <header>
         <img src={logoImage} alt="Be the Hero" />
         <span>{`Ben Vinda,${ongName}!`}</span>
-        <button type="button" className="button" onClick={Redirect}>
+        <Link type="button" className="button" onClick={Redirect}>
           Cadastrar novo Caso
-        </button>
+        </Link>
         <button type="button" onClick={handleLogout}>
           <FiPower size={18} color="#E02041" />
         </button>
