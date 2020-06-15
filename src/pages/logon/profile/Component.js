@@ -16,7 +16,7 @@ export default (props) => {
   const ongId = localStorage.getItem('ongId')
 
   function Redirect() {
-    history.push('/incidents')
+    history.push('incidents')
   }
   // //  --------------------alteraçções--------------
 
