@@ -22,7 +22,7 @@ export default function Register() {
     try {
       const res = await api.post('/ongs', data)
       console.log(data)
-      alert(`Seu ID de acesso! ${res.id}`)
+      alert(`Seu ID de acesso! ${res._id}`)
       history.push('/')
     } catch (error) {
       alert('Erro no cadastro!!')

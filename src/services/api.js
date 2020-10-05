@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://api-omnistack-course.herokuapp.com/'
+axios.defaults.baseURL = 'https://omnistack-course.herokuapp.com/'
 // axios.defaults.baseURL = 'http://localhost:4000/'
 
 axios.interceptors.request.use(
