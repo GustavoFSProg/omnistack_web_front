@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getIncidentsByOngId, api } from '../../../services/api'
+import { getIncidentsByOngId } from '../../../services/api'
 import Component from './Component'
 
 export default () => {
