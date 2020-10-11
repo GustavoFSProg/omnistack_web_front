@@ -18,7 +18,7 @@ export default (props) => {
   function Redirect() {
     history.push('/incidents')
   }
-  // //  --------------------alteraçções--------------
+  //  --------------------alteraçções--------------
 
   async function handleDeleteIncident(id) {
     try {
